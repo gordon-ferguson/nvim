@@ -35,3 +35,6 @@ keymap.set('n', 'N', 'Nzzzv')
 keymap.set('n', 'n', 'nzzzv')
 keymap.set({ 'n', 'x', 'o' }, 'H', '^')
 keymap.set({ 'n', 'x', 'o' }, 'L', '$')
+
+-- Change current working directory locally and print cwd after that
+keymap.set('n', '<leader>cd', '<cmd>lcd %:p:h<cr><cmd>pwd<cr>', { desc = 'change cwd' })
