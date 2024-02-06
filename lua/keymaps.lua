@@ -1,10 +1,6 @@
 local keymap = vim.keymap
 local opts = { noremap = true, silent = true }
 
--- Set leader and local leader keys
-vim.g.mapleader = " "
-vim.g.maplocalleader = ","
-
 -- General keymaps
 keymap.set('n', '<C-a>', 'ggVG')
 keymap.set('n', '<Esc>', '<Cmd>noh<CR>', opts)

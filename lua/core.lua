@@ -119,4 +119,7 @@ require("lazy").setup({
           'rafamadriz/friendly-snippets',
         },
     },
+    {
+        import = "plugins"
+    },
 })
