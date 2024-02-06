@@ -1,4 +1,4 @@
 -- Gordon's Init
 require("options")
-require("plugins")
+require("core")
 require("keymaps")
