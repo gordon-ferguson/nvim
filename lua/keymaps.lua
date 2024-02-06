@@ -3,7 +3,7 @@ local opts = { noremap = true, silent = true }
 
 -- General keymaps
 keymap.set('n', '<C-a>', 'ggVG') -- Select all in normal mode
-keymap.set('n', '<Esc>', '<Cmd>noh<CR>', opts) -- Hit escape to remove highlights
+keymap.set('n', '<BS>', '<C-^>', { silent = true, desc = 'Switch to last buffer' })keymap.set('n', '<Esc>', '<Cmd>noh<CR>', opts) -- Hit escape to remove highlights
 keymap.set('n', '<LocalLeader>l', '<Cmd>Lazy<CR>', { silent = true, desc = 'Lazy' }) -- Lazy Menu
 keymap.set('n', '<LocalLeader>m', '<Cmd>Mason<CR>', { silent = true, desc = 'Lazy' }) -- Mason Menu
 
