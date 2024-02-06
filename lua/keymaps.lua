@@ -1,6 +1,13 @@
 local keymap = vim.keymap
 
+-- Set leader and local leader keys
 vim.g.mapleader = " "
+vim.g.maplocalleader = ","
+
+-- General keymaps
+keymap.set('n', '<C-a>', 'ggVG')
+keymap.set('n', '<Esc>', '<Cmd>noh<CR>', opts)
+keymap.set('n', '<LocalLeader>l', '<Cmd>Lazy<CR>', { silent = true, desc = 'Lazy' })
 
 -- Rehighlight selection after indenting
 keymap.set('v', '<', '<gv', opts)
