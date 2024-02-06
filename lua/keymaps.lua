@@ -36,3 +36,11 @@ keymap.set({ 'n', 'x', 'o' }, 'L', '$')
 
 -- Change current working directory locally and print cwd after that
 keymap.set('n', '<leader>cd', '<cmd>lcd %:p:h<cr><cmd>pwd<cr>', { desc = 'change cwd' })
+
+-- Neorg binds
+keymap.set('n', '<Leader>nc', '<Cmd>Neorg toc<CR>', { silent = true, desc = 'Neorg Table of Contents' })
+keymap.set('n', '<Leader>ni', '<Cmd>Neorg index<CR>', { silent = true, desc = 'Default Index' })
+keymap.set('n', '<Leader>nj', '<Cmd>Neorg journal<CR>', { silent = true, desc = 'Journal' })
+keymap.set('n', '<Leader>nr', '<Cmd>Neorg return<CR>', { silent = true, desc = 'Neorg Return' })
+keymap.set('n', '<Leader>nwp', '<Cmd>Neorg workspace Personal<CR>', { silent = true, desc = 'Personal Neorg' })
+keymap.set('n', '<Leader>nww', '<Cmd>Neorg workspace Work<CR>', { silent = true, desc = 'Work Neorg' })
