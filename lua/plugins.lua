@@ -14,10 +14,17 @@ vim.opt.rtp:prepend(lazypath)
 
 require("lazy").setup({
     {
-    "catppuccin/nvim",
-    priority = 1000,
-    config = function()
-        vim.cmd.colorscheme "catppuccin-mocha"
-    end,
+        "catppuccin/nvim",
+        priority = 1000,
+        config = function()
+            vim.cmd.colorscheme "catppuccin-mocha"
+        end,
+    },
+    {
+        "nvim-treesitter/nvim-treesitter",
+        dependencies = {
+            "nvim-treesitter/nvim-treesitter-textobjects",
+        },
+        build = ":TSUpdate",
     },
 })
