@@ -140,6 +140,7 @@ require("lazy").setup({
         },
       },
     },
+    -- Autoimport lua files that appear in the lua/plugin/ folder
     {
         import = "plugins"
     },
