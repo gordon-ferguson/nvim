@@ -56,17 +56,17 @@ require("lazy").setup({
                         -- You can also use captures from other query groups like `locals.scm`
                         ["as"] = { query = "@scope", query_group = "locals", desc = "Select language scope" },
                       },
-                      -- You can choose the select mode (default is charwise 'v')
+                      -- You can choose the select mode (default is charwise "v")
                       --
                       -- Can also be a function which gets passed a table with the keys
-                      -- * query_string: eg '@function.inner'
-                      -- * method: eg 'v' or 'o'
-                      -- and should return the mode ('v', 'V', or '<c-v>') or a table
+                      -- * query_string: eg "@function.inner"
+                      -- * method: eg "v" or "o"
+                      -- and should return the mode ("v", "V", or "<c-v>") or a table
                       -- mapping query_strings to modes.
                       selection_modes = {
-                        ['@parameter.outer'] = 'v', -- charwise
-                        ['@function.outer'] = 'V', -- linewise
-                        ['@class.outer'] = '<c-v>', -- blockwise
+                        ["@parameter.outer"] = "v", -- charwise
+                        ["@function.outer"] = "V", -- linewise
+                        ["@class.outer"] = "<c-v>", -- blockwise
                       },
                       -- If you set this to `true` (default is `false`) then any textobject is
                       -- extended to include preceding or succeeding whitespace. Succeeding
@@ -74,8 +74,8 @@ require("lazy").setup({
                       -- `ap`.
                       --
                       -- Can also be a function which gets passed a table with the keys
-                      -- * query_string: eg '@function.inner'
-                      -- * selection_mode: eg 'v'
+                      -- * query_string: eg "@function.inner"
+                      -- * selection_mode: eg "v"
                       -- and should return true of false
                       include_surrounding_whitespace = true,
                     },
@@ -90,51 +90,52 @@ require("lazy").setup({
     -- LSP setup
     {
         -- LSP Configuration & Plugins
-    'neovim/nvim-lspconfig',
+    "neovim/nvim-lspconfig",
         dependencies = {
           -- Automatically install LSPs to stdpath for neovim
-          'williamboman/mason.nvim',
-          'williamboman/mason-lspconfig.nvim',
+          "williamboman/mason.nvim",
+          "williamboman/mason-lspconfig.nvim",
 
           -- Useful status updates for LSP
-          -- NOTE: `opts = {}` is the same as calling `require('fidget').setup({})`
-          { 'j-hui/fidget.nvim', tag = 'legacy', opts = {} },
+          -- NOTE: `opts = {}` is the same as calling `require("fidget").setup({})`
+          { "j-hui/fidget.nvim", tag = "legacy", opts = {} },
 
           -- Additional lua configuration, makes nvim stuff amazing!
-          'folke/neodev.nvim',
+          "folke/neodev.nvim",
         },
     },
     {
     -- Autocompletion
-    'hrsh7th/nvim-cmp',
+    "hrsh7th/nvim-cmp",
         dependencies = {
           -- Snippet Engine & its associated nvim-cmp source
-          'L3MON4D3/LuaSnip',
-          'saadparwaiz1/cmp_luasnip',
+          "L3MON4D3/LuaSnip",
+          "saadparwaiz1/cmp_luasnip",
 
           -- Adds LSP completion capabilities
-          'hrsh7th/cmp-nvim-lsp',
+          "hrsh7th/cmp-nvim-lsp",
 
           -- Adds a number of user-friendly snippets
-          'rafamadriz/friendly-snippets',
+          "rafamadriz/friendly-snippets",
         },
     },
      -- Fuzzy Finder (files, lsp, etc)
     {
-      'nvim-telescope/telescope.nvim',
-      branch = '0.1.x',
+      "nvim-telescope/telescope.nvim",
+      branch = "0.1.x",
       dependencies = {
-        'nvim-lua/plenary.nvim',
+        "nvim-lua/plenary.nvim",
+        "nvim-telescope/telescope-symbols.nvim",
         -- Fuzzy Finder Algorithm which requires local dependencies to be built.
         -- Only load if `make` is available. Make sure you have the system
         -- requirements installed.
         {
-          'nvim-telescope/telescope-fzf-native.nvim',
+          "nvim-telescope/telescope-fzf-native.nvim",
           -- NOTE: If you are having trouble with this installation,
           --       refer to the README for telescope-fzf-native for more instructions.
-          build = 'make',
+          build = "make",
           cond = function()
-            return vim.fn.executable 'make' == 1
+            return vim.fn.executable "make" == 1
           end,
         },
       },
