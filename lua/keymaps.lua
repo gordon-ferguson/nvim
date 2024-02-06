@@ -2,10 +2,10 @@ local keymap = vim.keymap
 local opts = { noremap = true, silent = true }
 
 -- General keymaps
-keymap.set('n', '<C-a>', 'ggVG')
-keymap.set('n', '<Esc>', '<Cmd>noh<CR>', opts)
-keymap.set('n', '<LocalLeader>l', '<Cmd>Lazy<CR>', { silent = true, desc = 'Lazy' })
-keymap.set('n', '<LocalLeader>m', '<Cmd>Mason<CR>', { silent = true, desc = 'Lazy' })
+keymap.set('n', '<C-a>', 'ggVG') -- Select all in normal mode
+keymap.set('n', '<Esc>', '<Cmd>noh<CR>', opts) -- Hit escape to remove highlights
+keymap.set('n', '<LocalLeader>l', '<Cmd>Lazy<CR>', { silent = true, desc = 'Lazy' }) -- Lazy Menu
+keymap.set('n', '<LocalLeader>m', '<Cmd>Mason<CR>', { silent = true, desc = 'Lazy' }) -- Mason Menu
 
 -- Rehighlight selection after indenting
 keymap.set('v', '<', '<gv', opts)
@@ -26,8 +26,8 @@ keymap.set('x', '<leader>p', [["_dP]], { desc = 'Paste over visual selection' })
 keymap.set('n', ';', ':')
 
 -- Quality of life adjustments for smoother movements
-keymap.set('n', '<C-d>', '<C-d>zz')
-keymap.set('n', '<C-u>', '<C-u>zz')
+keymap.set('n', '<C-d>', '<C-d>zz') -- Scroll page down and center cursor
+keymap.set('n', '<C-u>', '<C-u>zz') -- Scroll page up and center cursor
 keymap.set('n', 'J', 'mzJ`z')
 keymap.set('n', 'N', 'Nzzzv')
 keymap.set('n', 'n', 'nzzzv')
