@@ -14,6 +14,9 @@ vim.opt.expandtab = true
 vim.opt.tabstop = 4
 vim.opt.shiftwidth = 4
 
+-- Itincremental search
+vim.opt.incsearch = true
+
 -- Clipboard
 vim.opt.clipboard = "unnamedplus"
 
