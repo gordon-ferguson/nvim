@@ -6,7 +6,7 @@ local opts = { noremap = true, silent = true }
 keymap.set("n", "<C-a>", "ggVG") -- Select all in normal mode
 keymap.set("n", "<BS>", "<C-^>", { silent = true, desc = "Switch to last buffer" })keymap.set("n", "<Esc>", "<Cmd>noh<CR>", opts) -- Hit escape to remove highlights
 keymap.set("n", "<LocalLeader>l", "<Cmd>Lazy<CR>", { silent = true, desc = "Lazy" }) -- Lazy Menu
-keymap.set("n", "<LocalLeader>m", "<Cmd>Mason<CR>", { silent = true, desc = "Lazy" }) -- Mason Menu
+keymap.set("n", "<LocalLeader>m", "<Cmd>Mason<CR>", { silent = true, desc = "Mason" }) -- Mason Menu
 
 -- Rehighlight selection after indenting
 keymap.set("v", "<", "<gv", opts)
@@ -39,12 +39,18 @@ keymap.set({ "n", "x", "o" }, "L", "$")
 keymap.set("n", "<Leader>cd", "<cmd>lcd %:p:h<cr><cmd>pwd<cr>", { desc = "change cwd" })
 
 -- Neorg binds
-keymap.set("n", "<Leader>nc", "<Cmd>Neorg toc<CR>", { silent = true, desc = "Neorg Table of Contents" })
-keymap.set("n", "<Leader>ni", "<Cmd>Neorg index<CR>", { silent = true, desc = "Default Index" })
-keymap.set("n", "<Leader>nj", "<Cmd>Neorg journal<CR>", { silent = true, desc = "Journal" })
-keymap.set("n", "<Leader>nr", "<Cmd>Neorg return<CR>", { silent = true, desc = "Neorg Return" })
-keymap.set("n", "<Leader>nwp", "<Cmd>Neorg workspace Personal<CR>", { silent = true, desc = "Personal Neorg" })
-keymap.set("n", "<Leader>nww", "<Cmd>Neorg workspace Work<CR>", { silent = true, desc = "Work Neorg" })
+keymap.set("n", "<LocalLeader>nc", "<Cmd>Neorg toc<CR>", { silent = true, desc = "Neorg Table of Contents" })
+keymap.set("n", "<LocalLeader>ni", "<Cmd>Neorg index<CR>", { silent = true, desc = "Default Index" })
+keymap.set("n", "<LocalLeader>nj", "<Cmd>Neorg journal<CR>", { silent = true, desc = "Journal" })
+keymap.set("n", "<LocalLeader>nr", "<Cmd>Neorg return<CR>", { silent = true, desc = "Neorg Return" })
+keymap.set("n", "<LocalLeader>nwp", "<Cmd>Neorg workspace Personal<CR>", { silent = true, desc = "Personal Neorg" })
+keymap.set("n", "<LocalLeader>nww", "<Cmd>Neorg workspace Work<CR>", { silent = true, desc = "Work Neorg" })
+
+-- Lazygit
+keymap.set("n", "<LocalLeader>g", "<Cmd>LazyGit<CR>", { silent = true, desc = "LazyGit" })
+
+-- Oil
+keymap.set("n", "<LocalLeader>o", "<Cmd>Oil<CR>", { silent = true, desc = "Oil" })
 
 -- Telescope
 -- Enable telescope fzf native, if installed
