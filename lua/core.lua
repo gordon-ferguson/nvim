@@ -21,6 +21,11 @@ require("lazy").setup({
                 integrations = {
                     leap = true,
                     gitsigns = true,
+                    fidget = true,
+                    harpoon = true,
+                    mason = true,
+                    cmp = true,
+                    telescope = { enabled = true },
                 }
             })
             vim.cmd.colorscheme "catppuccin-mocha"
