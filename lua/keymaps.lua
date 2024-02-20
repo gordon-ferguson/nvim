@@ -3,9 +3,10 @@ local keymap = vim.keymap
 local opts = { noremap = true, silent = true }
 
 -- General keymaps
-keymap.set("n", "<C-a>", "ggVG") -- Select all in normal mode
-keymap.set("n", "<BS>", "<C-^>", { silent = true, desc = "Switch to last buffer" })keymap.set("n", "<Esc>", "<Cmd>noh<CR>", opts) -- Hit escape to remove highlights
-keymap.set("n", "<LocalLeader>l", "<Cmd>Lazy<CR>", { silent = true, desc = "Lazy" }) -- Lazy Menu
+keymap.set("n", "<C-a>", "ggVG")                                                       -- Select all in normal mode
+keymap.set("n", "<BS>", "<C-^>", { silent = true, desc = "Switch to last buffer" })
+keymap.set("n", "<Esc>", "<Cmd>noh<CR>", opts)                                         -- Hit escape to remove highlights
+keymap.set("n", "<LocalLeader>l", "<Cmd>Lazy<CR>", { silent = true, desc = "Lazy" })   -- Lazy Menu
 keymap.set("n", "<LocalLeader>m", "<Cmd>Mason<CR>", { silent = true, desc = "Mason" }) -- Mason Menu
 
 -- Rehighlight selection after indenting
@@ -50,7 +51,8 @@ keymap.set("n", "<LocalLeader>nww", "<Cmd>Neorg workspace Work<CR>", { silent = 
 keymap.set("n", "<LocalLeader>g", "<Cmd>LazyGit<CR>", { silent = true, desc = "LazyGit" })
 
 -- Oil
-keymap.set("n", "<LocalLeader>o", "<Cmd>Oil<CR>", { silent = true, desc = "Oil" })
+keymap.set("n", "<LocalLeader><LocalLeader>", "<Cmd>Oil<CR>", { silent = true, desc = "Oil" })
+keymap.set("n", "<LocalLeader>o", "<CMD>lua require('oil').open_float()<CR>", { desc = "Open Oil in float mode" })
 
 -- Telescope
 -- Enable telescope fzf native, if installed
@@ -60,19 +62,23 @@ pcall(require("telescope").load_extension, "fzf")
 keymap.set("n", "<Leader>?", require("telescope.builtin").oldfiles, { desc = "[?] Find recently opened files" })
 keymap.set("n", "<Leader><space>", require("telescope.builtin").buffers, { desc = "[ ] Find existing buffers" })
 keymap.set("n", "<Leader>/", function()
-  -- You can pass additional configuration to telescope to change theme, layout, etc.
-  require("telescope.builtin").current_buffer_fuzzy_find(require("telescope.themes").get_dropdown {
-    winblend = 10,
-    previewer = false,
-  })
+    -- You can pass additional configuration to telescope to change theme, layout, etc.
+    require("telescope.builtin").current_buffer_fuzzy_find(require("telescope.themes").get_dropdown {
+        winblend = 10,
+        previewer = false,
+    })
 end, { desc = "[/] Fuzzily search in current buffer" })
 
 keymap.set("n", "<Leader>gf", require("telescope.builtin").git_files, { desc = "Search [G]it [F]iles" })
 keymap.set("n", "<Leader>sf", require("telescope.builtin").find_files, { desc = "[S]earch [F]iles" })
 keymap.set("n", "<Leader>sh", require("telescope.builtin").help_tags, { desc = "[S]earch [H]elp" })
 keymap.set("n", "<Leader>sw", require("telescope.builtin").grep_string, { desc = "[S]earch current [W]ord" })
+keymap.set("n", "<Leader>sk", require("telescope.builtin").keymaps, { desc = "[S]earch [K]eymaps" })
 keymap.set("n", "<Leader>sg", require("telescope.builtin").live_grep, { desc = "[S]earch by [G]rep" })
 keymap.set("n", "<Leader>sd", require("telescope.builtin").diagnostics, { desc = "[S]earch [D]iagnostics" })
-keymap.set("n", "<Leader>sr", require("telescope.builtin").resume, { desc = "[S]earch [R]esume" })
- -- Undotree
+-- keymap.set("n", "<Leader>sr", require("telescope.builtin").resume, { desc = "[S]earch [R]esume" })
+keymap.set("n", "<Leader>sr", require("telescope.builtin").registers, { desc = "[S]earch [R]egisters" })
+
+-- Undotree
 keymap.set("n", "<LocalLeader>u", "<Cmd>UndotreeToggle<CR>", opts)
+

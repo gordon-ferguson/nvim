@@ -8,4 +8,4 @@ return {
             section_separators = " ",
         },
     },
-} 
+}

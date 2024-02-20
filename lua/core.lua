@@ -17,6 +17,11 @@ require("lazy").setup({
         "catppuccin/nvim",
         priority = 1000,
         config = function()
+            require("catppuccin").setup ({
+                integrations = {
+                    leap = true,
+                }
+            })
             vim.cmd.colorscheme "catppuccin-mocha"
         end,
     },
