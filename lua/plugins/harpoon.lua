@@ -11,23 +11,23 @@ return {
 
             vim.keymap.set("n", "<leader>ha", function()
                 harpoon:list():append()
-            end),
+            end, { desc = "Add current file to harpoon" }),
             vim.keymap.set("n", "<leader>hh", function()
                 harpoon.ui:toggle_quick_menu(harpoon:list())
-            end),
+            end, { desc = "Toggle Harpoon Menu" }),
 
             vim.keymap.set("n", "<leader>hi", function()
                 harpoon:list():select(1)
-            end),
+            end, { desc = "Select first item in harpoon" }),
             vim.keymap.set("n", "<leader>hj", function()
                 harpoon:list():select(2)
-            end),
+            end, { desc = "Select second item in harpoon" }),
             vim.keymap.set("n", "<leader>hk", function()
                 harpoon:list():select(3)
-            end),
+            end, { desc = "Select third item in harpoon" }),
             vim.keymap.set("n", "<leader>hl", function()
                 harpoon:list():select(4)
-            end)
+            end, { desc = "Select fourth item in harpoon" }),
         })
     end,
 }

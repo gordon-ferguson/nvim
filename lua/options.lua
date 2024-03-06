@@ -31,7 +31,7 @@ vim.opt.inccommand = "split"
 -- Save undo history
 vim.opt.undofile = true
 
--- Colors   
+-- Colors
 vim.opt.termguicolors = true
 
 -- Swap

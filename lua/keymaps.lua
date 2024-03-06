@@ -9,6 +9,10 @@ keymap.set("n", "<Esc>", "<Cmd>noh<CR>", opts)                                  
 keymap.set("n", "<LocalLeader>l", "<Cmd>Lazy<CR>", { silent = true, desc = "Lazy" })   -- Lazy Menu
 keymap.set("n", "<LocalLeader>m", "<Cmd>Mason<CR>", { silent = true, desc = "Mason" }) -- Mason Menu
 
+-- J and K key
+keymap.set("n", "j", "gj", opts)
+keymap.set("n", "k", "gk", opts)
+
 -- Rehighlight selection after indenting
 keymap.set("v", "<", "<gv", opts)
 keymap.set("v", ">", ">gv", opts)
