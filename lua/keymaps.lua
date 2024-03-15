@@ -50,6 +50,14 @@ keymap.set("n", "<LocalLeader>nj", "<Cmd>Neorg journal<CR>", { silent = true, de
 keymap.set("n", "<LocalLeader>nr", "<Cmd>Neorg return<CR>", { silent = true, desc = "Neorg Return" })
 keymap.set("n", "<LocalLeader>nwp", "<Cmd>Neorg workspace Personal<CR>", { silent = true, desc = "Personal Neorg" })
 keymap.set("n", "<LocalLeader>nww", "<Cmd>Neorg workspace Work<CR>", { silent = true, desc = "Work Neorg" })
+keymap.set("n", "<LocalLeader>nt", "<Cmd>Neorg todo<CR>", { silent = true, desc = "Neorg Todo" })
+keymap.set("n", "<LocalLeader>ntd", "core.qol.todo_items.todo.task_done", { silent = true, desc = "Neorg Todo Done" })
+keymap.set("n", "<LocalLeader>ntu", "core.qol.todo_items.todo.task_undone", { silent = true, desc = "Neorg Todo Undone" })
+keymap.set("n", "<LocalLeader>ntp", "core.qol.todo_items.todo.task_pending", { silent = true, desc = "Neorg Todo Pending" })
+keymap.set("n", "<LocalLeader>nth", "core.qol.todo_items.todo.task_on_hold", { silent = true, desc = "Neorg Todo On Hold" })
+keymap.set("n", "<LocalLeader>ntc", "core.qol.todo_items.todo.task_cancelled", { silent = true, desc = "Neorg Todo Cancelled" })
+keymap.set("n", "<LocalLeader>ntr", "core.qol.todo_items.todo.task_recurring", { silent = true, desc = "Neorg Todo Recurring" })
+keymap.set("n", "<LocalLeader>nti", "core.qol.todo_items.todo.task_important", { silent = true, desc = "Neorg Todo Important" })
 
 -- Lazygit
 keymap.set("n", "<LocalLeader>g", "<Cmd>LazyGit<CR>", { silent = true, desc = "LazyGit" })

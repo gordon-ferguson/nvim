@@ -24,7 +24,7 @@ local modules = {
     -- https://github.com/nvim-neorg/neorg/blob/main/lua/neorg/modules/core/keybinds/keybinds.lua
     config = {
       default_keybinds = true,
-      neorg_leader = "<Leader>n",
+      neorg_leader = "<LocalLeader>n",
     },
   },
   ["core.dirman"] = {
