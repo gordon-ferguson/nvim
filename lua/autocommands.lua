@@ -1,4 +1,5 @@
 return {
+    -- Redirect output of vim command to new buffer instead of built-in command output
     vim.api.nvim_create_user_command('Redir', function(ctx)
         local lines = vim.split(vim.api.nvim_exec(ctx.args, true), '\n', { plain = true })
         vim.cmd('new')
