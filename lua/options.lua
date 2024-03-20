@@ -42,6 +42,7 @@ vim.opt.pumblend = 10
 
 -- Folds / Neorg
 vim.opt.conceallevel = 1
+vim.opt.foldlevelstart = 99 -- Disable folding by default
 
 -- Show pending command in normal mode
 vim.opt.showcmd = true
