@@ -1,3 +1,6 @@
+-- Remove intro message
+vim.opt.shortmess:append('I')
+
 -- Numbers
 vim.opt.number = true
 vim.opt.relativenumber = true
