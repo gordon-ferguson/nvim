@@ -6,10 +6,11 @@ local M = {
     "nvim-treesitter/nvim-treesitter",
     "nvim-treesitter/nvim-treesitter-textobjects",
     "nvim-cmp",
+    "vhyrro/luarocks.nvim",
     "nvim-lua/plenary.nvim",
     "nvim-neorg/neorg-telescope",
   },
-  build = ":Neorg sync-parsers",
+  -- build = ":Neorg sync-parsers",
   cmd = "Neorg",
 }
 local modules = {
