@@ -1,12 +1,12 @@
 -- lazy.nvim spec
 local M = {
   "nvim-neorg/neorg",
+  version = "7.0.0",
   ft = "norg",
   dependencies = {
     "nvim-treesitter/nvim-treesitter",
     "nvim-treesitter/nvim-treesitter-textobjects",
     "nvim-cmp",
-    "vhyrro/luarocks.nvim",
     "nvim-lua/plenary.nvim",
     "nvim-neorg/neorg-telescope",
   },
