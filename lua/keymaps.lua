@@ -113,3 +113,5 @@ keymap.set("n", "<Leader>sr", require("telescope.builtin").registers, { desc = "
 -- Undotree
 keymap.set("n", "<LocalLeader>u", "<Cmd>UndotreeToggle<CR>", opts)
 
+-- Zoxide
+keymap.set("n", "<LocalLeader>z", ":Z ", { silent = true, desc = "Zoxide" })
