@@ -41,7 +41,7 @@ keymap.set({ "n", "x", "o" }, "H", "^")
 keymap.set({ "n", "x", "o" }, "L", "$")
 
 -- Change current working directory locally and print cwd after that
-keymap.set("n", "<Leader>cd", "<cmd>lcd %:p:h<cr><cmd>pwd<cr>", { desc = "change cwd" })
+keymap.set("n", "<LocalLeader>cd", "<cmd>lcd %:p:h<cr><cmd>pwd<cr>", { desc = "change cwd" })
 
 -- Neorg binds
 keymap.set("n", "<LocalLeader>nc", "<Cmd>Neorg toc<CR>", { silent = true, desc = "Neorg Table of Contents" })
