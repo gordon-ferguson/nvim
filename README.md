@@ -3,7 +3,7 @@
 My personal neovim configuration that has been a result of almost
 10 years of vim/nvim use. Some small things may change every now and then
 but I have largely settled on this base workflow and might make small changes as
-project warrant them.
+projects warrant them.
 
 Feel free to make any suggestions!
 
