@@ -10,3 +10,5 @@ Feel free to make any suggestions!
 The only regular update to this git repo will be the lazy-lock which reflects
 plugin versions and I've found it useful enough for me to keep it tracked
 and public.
+
+Must have Ripgrep installed for Telescope functionality.
