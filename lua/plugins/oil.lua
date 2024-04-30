@@ -9,5 +9,5 @@ return {
                 ["q"] = "<cmd>lua require('oil').close()<CR>",
             },
         })
-end
+    end
 }
