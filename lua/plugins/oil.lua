@@ -4,6 +4,10 @@ return {
         "nvim-tree/nvim-web-devicons",
     },
     config = function()
-        require("oil").setup({})
+        require("oil").setup({
+            keymaps = {
+                ["q"] = "<cmd>lua require('oil').close()<CR>",
+            },
+        })
 end
 }
