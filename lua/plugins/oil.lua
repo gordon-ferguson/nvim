@@ -6,7 +6,7 @@ return {
     config = function()
         require("oil").setup({
             keymaps = {
-                ["q"] = "<cmd>lua require('oil').close()<CR>",
+                ["q"] = "actions.close",
             },
         })
     end
