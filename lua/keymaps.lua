@@ -59,24 +59,26 @@ keymap.set("n", "<LocalLeader>ntc", "core.qol.todo_items.todo.task_cancelled", {
 keymap.set("n", "<LocalLeader>ntr", "core.qol.todo_items.todo.task_recurring", { silent = true, desc = "Neorg Todo Recurring" })
 keymap.set("n", "<LocalLeader>nti", "core.qol.todo_items.todo.task_important", { silent = true, desc = "Neorg Todo Important" })
 
-local neorg_callbacks = require("neorg.core.callbacks")
-
-neorg_callbacks.on_event("core.keybinds.events.enable_keybinds", function(_, keybinds)
-    -- Map all the below keybinds only when the "norg" mode is active
-    keybinds.map_event_to_mode("norg", {
-        n = { -- Bind keys in normal mode
-            { "<C-s>", "core.integrations.telescope.find_linkable" },
-        },
-
-        i = { -- Bind in insert mode
-            { "<C-l>", "core.integrations.telescope.insert_link" },
-            { "<C-f>", "core.integrations.telescope.insert_file_link" },
-        },
-    }, {
-        silent = true,
-        noremap = true,
-    })
-end)
+-- TODO: Update these bindings -- 
+--
+-- local neorg_callbacks = require("neorg.core.callbacks")
+--
+-- neorg_callbacks.on_event("core.keybinds.events.enable_keybinds", function(_, keybinds)
+--     -- Map all the below keybinds only when the "norg" mode is active
+--     keybinds.map_event_to_mode("norg", {
+--         n = { -- Bind keys in normal mode
+--             { "<C-s>", "core.integrations.telescope.find_linkable" },
+--         },
+--
+--         i = { -- Bind in insert mode
+--             { "<C-l>", "core.integrations.telescope.insert_link" },
+--             { "<C-f>", "core.integrations.telescope.insert_file_link" },
+--         },
+--     }, {
+--         silent = true,
+--         noremap = true,
+--     })
+-- end)
 
 -- Lazygit
 keymap.set("n", "<LocalLeader>g", "<Cmd>LazyGit<CR>", { silent = true, desc = "LazyGit" })
