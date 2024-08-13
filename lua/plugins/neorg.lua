@@ -1,7 +1,7 @@
 -- lazy.nvim spec
 local M = {
   "nvim-neorg/neorg",
-  version = "7.0.0",
+  version = "*",
   ft = "norg",
   dependencies = {
     "nvim-treesitter/nvim-treesitter",
@@ -44,3 +44,11 @@ M.opts = {
   load = modules,
 }
 return M
+
+-- return {
+--     "nvim-neorg/neorg",
+--     lazy = false, -- Disable lazy loading as some `lazy.nvim` distributions set `lazy = true` by default
+--     version = "*", -- Pin Neorg to the latest stable release
+--     config = true,
+-- }
+
