@@ -82,6 +82,9 @@ keymap.set("n", "<LocalLeader>ne", ":Neorg export to-file ", { silent = true, de
 --     })
 -- end)
 
+-- Use pandoc to concert current markdown file to pdf
+keymap.set("n", "<LocalLeader>cp", "<Cmd>!pandoc % -o %:r.pdf<CR>", { silent = true, desc = "Pandoc PDF" })
+
 -- Lazygit
 keymap.set("n", "<LocalLeader>g", "<Cmd>LazyGit<CR>", { silent = true, desc = "LazyGit" })
 
