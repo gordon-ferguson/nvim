@@ -46,6 +46,9 @@ keymap.set({ "n", "x", "o" }, "L", "$")
 -- Change current working directory locally and print cwd after that
 keymap.set("n", "<LocalLeader>cd", "<cmd>lcd %:p:h<cr><cmd>pwd<cr>", { desc = "change cwd" })
 
+-- Open Markdown previewer
+keymap.set("n", "<LocalLeader>dp", "<Cmd>MarkdownPreview<CR>", { silent = true, desc = "Markdown Preview" })
+
 -- Neorg binds
 keymap.set("n", "<LocalLeader>nc", "<Cmd>Neorg toc<CR>", { silent = true, desc = "Neorg Table of Contents" })
 keymap.set("n", "<LocalLeader>ni", "<Cmd>Neorg index<CR>", { silent = true, desc = "Default Index" })
