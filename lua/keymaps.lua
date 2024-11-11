@@ -120,8 +120,9 @@ keymap.set("n", "<Leader>sw", require("telescope.builtin").grep_string, { desc =
 keymap.set("n", "<Leader>sk", require("telescope.builtin").keymaps, { desc = "[S]earch [K]eymaps" })
 keymap.set("n", "<Leader>sg", require("telescope.builtin").live_grep, { desc = "[S]earch by [G]rep" })
 keymap.set("n", "<Leader>sd", require("telescope.builtin").diagnostics, { desc = "[S]earch [D]iagnostics" })
--- keymap.set("n", "<Leader>sr", require("telescope.builtin").resume, { desc = "[S]earch [R]esume" })
+keymap.set("n", "<Leader>sR", require("telescope.builtin").resume, { desc = "[S]earch [R]esume" })
 keymap.set("n", "<Leader>sr", require("telescope.builtin").registers, { desc = "[S]earch [R]egisters" })
+keymap.set("n", "<Leader>s?", require("telescope.builtin").builtin, { desc = "[S]earch [B]uiltins" })
 
 -- Undotree
 keymap.set("n", "<LocalLeader>u", "<Cmd>UndotreeToggle<CR>", opts)
