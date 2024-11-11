@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/env bash
 
 # Function to check if a command exists
 function command_exists() {
